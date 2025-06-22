@@ -1,4 +1,4 @@
-package com.mega
+package com.turkmegadepo
 
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
@@ -14,7 +14,7 @@ import com.lagradost.cloudstream3.ui.settings.extensions.RepositoryData
 import com.lagradost.cloudstream3.utils.Coroutines.ioSafe
 
 @CloudstreamPlugin
-class MegaPlugin : Plugin() {
+class TurkMegaPlugin : Plugin() {
     override fun load(context: Context) {
         ioSafe {
             val repositories = getRepositories()
