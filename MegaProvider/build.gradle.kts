@@ -2,9 +2,7 @@
 version = 1
 
 cloudstream {
-    description = "This plugin adds all repositories each time the app is opened. " +
-            "Uninstall after one run if you do not want all repositories. " +
-            "Does not automatically refresh the repository list."
+    description = "Bu eklenti, uygulama her açıldığında tüm depoları ekler. Eğer tüm depoları eklemek istemiyorsanız, tek bir çalıştırmadan sonra eklentiyi kaldırın. Depo listesi otomatik olarak yenilenmez."
 
     /**
     * Status int as the following:
