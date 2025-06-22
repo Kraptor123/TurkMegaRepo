@@ -14,5 +14,5 @@ cloudstream {
     * 3: Beta only
     * */
     status = 1
-    language = "en"
+    language = "tr"
 }
