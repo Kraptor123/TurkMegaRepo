@@ -42,7 +42,7 @@ class TurkMegaPlugin : Plugin() {
         )
 
         val text =
-            app.get("https://raw.githubusercontent.com/Kraptor123/TurkMegaRepo/refs/heads/master/repos-db.json").text
+            app.get("https://raw.githubusercontent.com/Kraptor123/TurkMegaRepo/refs/heads/builds/repos-db.json").text
 
         // To parse both objects and strings
         val tree = ObjectMapper().readTree(text)
