@@ -1,5 +1,5 @@
 // use an integer for version numbers
-version = 0
+version = 1
 
 cloudstream {
     description = "Bu eklenti, uygulama her açıldığında tüm depoları ekler. Eğer tüm depoları eklemek istemiyorsanız, tek bir çalıştırmadan sonra eklentiyi kaldırın. Depo listesi otomatik olarak yenilenmez."
