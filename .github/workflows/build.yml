@@ -29,8 +29,8 @@ jobs:
           ref: "builds"
           path: "builds"
       
-      - name: Clean old builds
-        run: rm $GITHUB_WORKSPACE/builds/*.cs3
+#      - name: Clean old builds
+#        run: rm $GITHUB_WORKSPACE/builds/*.cs3
 
       - name: Setup JDK 23
         uses: actions/setup-java@v1
