@@ -1,0 +1,8 @@
+{
+  "name": "Türk Mega Repo",
+  "description": "Türk Mega Repo",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/Kraptor123/TurkMegaRepo/refs/heads/builds/plugins.json"
+  ]
+}
