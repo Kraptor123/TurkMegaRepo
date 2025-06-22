@@ -1,0 +1,17 @@
+[
+    {
+        "url": "https://raw.githubusercontent.com/Kraptor123/TurkMegaRepo/builds/TurkMegaSaglayici.cs3",
+        "status": 1,
+        "version": 2,
+        "name": "TurkMegaSaglayici",
+        "internalName": "TurkMegaSaglayici",
+        "authors": [
+            
+        ],
+        "description": "Bu eklenti, uygulama her a\u00e7\u0131ld\u0131\u011f\u0131nda t\u00fcm depolar\u0131 ekler. E\u011fer t\u00fcm depolar\u0131 eklemek istemiyorsan\u0131z, tek bir \u00e7al\u0131\u015ft\u0131rmadan sonra eklentiyi kald\u0131r\u0131n. Depo listesi otomatik olarak yenilenmez.",
+        "fileSize": 7954,
+        "repositoryUrl": "https://github.com/Kraptor123/TurkMegaRepo",
+        "language": "tr",
+        "apiVersion": 1
+    }
+]
