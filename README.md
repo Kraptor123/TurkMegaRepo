@@ -1,4 +1,4 @@
-### One repository to rule them all
+### Tüm Türkçe Repolar
 Tek depo ile birden çok depoyu indirin kısakod: [megaturk](https://raw.githubusercontent.com/Kraptor123/TurkMegaRepo/refs/heads/master/repo.json)
 
 Gorile tıklayıp tek tıkla kurabilirsiniz:
