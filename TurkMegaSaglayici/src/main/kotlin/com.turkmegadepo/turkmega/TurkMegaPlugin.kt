@@ -30,8 +30,14 @@ class TurkMegaPlugin : Plugin() {
 
             val repo = RepositoryManager.parseRepository(url)
             val name = repo?.name ?: "No name"
-            val data = RepositoryData(name, url)
-            RepositoryManager.addRepository(data)
+            try {
+                val iconUrl = repo?.iconUrl
+                val data = RepositoryData(iconUrl, name, url)
+                RepositoryManager.addRepository(data)
+            } catch (_: Throwable) {
+                val data = RepositoryData(name, url)
+                RepositoryManager.addRepository(data)
+            }
         }
     }
 
