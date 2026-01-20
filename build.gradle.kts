@@ -27,7 +27,19 @@ allprojects {
 
 fun Project.cloudstream(configuration: CloudstreamExtension.() -> Unit) = extensions.getByName<CloudstreamExtension>("cloudstream").configuration()
 
-fun Project.android(configuration: BaseExtension.() -> Unit) = extensions.getByName<BaseExtension>("android").configuration()
+fun Project.android(configuration: BaseExtension.() -> Unit) {
+    extensions.getByName<BaseExtension>("android").apply {
+        (extensions.findByName("java") as? JavaPluginExtension)?.apply {
+            // Use Java 17 toolchain even if a higher JDK runs the build.
+            // We still use Java 8 for now which higher JDKs have deprecated.
+            toolchain {
+                languageVersion.set(JavaLanguageVersion.of(17))
+            }
+        }
+
+        configuration()
+    }
+}
 
 subprojects {
     apply(plugin = "com.android.library")
@@ -41,11 +53,11 @@ subprojects {
 
     android {
         namespace = "com.turkmegadepo"
-        compileSdkVersion(35)
+        compileSdkVersion(36)
 
         defaultConfig {
             minSdk = 21
-            targetSdk = 35
+            targetSdk = 36
         }
 
         compileOptions {
@@ -60,7 +72,8 @@ subprojects {
                     listOf(
                         "-Xno-call-assertions",
                         "-Xno-param-assertions",
-                        "-Xno-receiver-assertions"
+                        "-Xno-receiver-assertions",
+                        "-Xannotation-default-target=param-property"
                     )
                 )
             }
@@ -79,9 +92,9 @@ subprojects {
         // https://github.com/recloudstream/cloudstream/blob/master/app/build.gradle
         implementation(kotlin("stdlib")) // adds standard kotlin features, like listOf, mapOf etc
         implementation("com.github.Blatzar:NiceHttp:0.4.13") // http library
-        implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
-        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.1")
-        implementation("org.jsoup:jsoup:1.19.1") // html parser
+        implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.5")
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
+        implementation("org.jsoup:jsoup:1.22.1") // html parser
     }
 }
 
