@@ -41,11 +41,11 @@ subprojects {
 
     android {
         namespace = "com.turkmegadepo"
-        compileSdkVersion(30)
+        compileSdkVersion(35)
 
         defaultConfig {
             minSdk = 21
-            targetSdk = 30
+            targetSdk = 35
         }
 
         compileOptions {
@@ -81,7 +81,7 @@ subprojects {
         implementation("com.github.Blatzar:NiceHttp:0.4.13") // http library
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.1")
-        implementation("org.jsoup:jsoup:1.13.1") // html parser
+        implementation("org.jsoup:jsoup:1.19.1") // html parser
     }
 }
 
